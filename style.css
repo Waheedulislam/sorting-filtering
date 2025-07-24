@@ -1,0 +1,100 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8fafc;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #0ea5e9;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 180px;
+}
+
+.toggle-btn:hover {
+  background-color: #0284c7;
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn.open .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 14px 16px;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  min-width: 240px;
+  z-index: 100;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-content label {
+  font-size: 15px;
+  padding: 6px 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdown-content label:hover {
+  background-color: #f1f5f9;
+  border-radius: 6px;
+}
+
+.card {
+  padding: 16px 20px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin: 10px auto;
+  max-width: 500px;
+  font-size: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}

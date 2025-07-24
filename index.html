@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter and Sort with Checkboxes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="controls">
+      <!-- Filter Dropdown -->
+      <div class="dropdown">
+        <button id="filterToggle" class="toggle-btn">
+          <span>Filter by</span>
+          <svg
+            class="arrow-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div id="filterOptions" class="dropdown-content">
+          <label
+            ><input type="checkbox" value="Shuttle (Parkhaus)" /> Shuttle
+            (Parkhaus)</label
+          >
+          <label
+            ><input type="checkbox" value="Shuttle (Parkplatz)" /> Shuttle
+            (Parkplatz)</label
+          >
+          <label
+            ><input type="checkbox" value="Valet (Parkhaus)" /> Valet
+            (Parkhaus)</label
+          >
+          <label
+            ><input type="checkbox" value="Valet (Parkplatz)" /> Valet
+            (Parkplatz)</label
+          >
+          <label
+            ><input type="checkbox" value="Direkt im Flughafen" /> Direkt im
+            Flughafen</label
+          >
+          <label
+            ><input type="checkbox" value="E-Ladestation" />
+            E-Ladestation</label
+          >
+          <label
+            ><input type="checkbox" value="Große Fahrzeuge" /> Große
+            Fahrzeuge</label
+          >
+          <label
+            ><input type="checkbox" value="Autoschlüssel Mitnahme" />
+            Autoschlüssel Mitnahme</label
+          >
+          <label
+            ><input type="checkbox" value="Im Voraus bezahlen" /> Im Voraus
+            bezahlen</label
+          >
+          <label
+            ><input type="checkbox" value="Direkt vor Ort bezahlen" /> Direkt
+            vor Ort bezahlen</label
+          >
+        </div>
+      </div>
+
+      <!-- Sort Dropdown (now using checkboxes) -->
+      <div class="dropdown">
+        <button id="sortToggle" class="toggle-btn">
+          <span>Best rating</span>
+          <svg
+            class="arrow-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        <div id="sortOptions" class="dropdown-content">
+          <label
+            ><input type="checkbox" name="sort" value="price" /> Best
+            Price</label
+          >
+          <label
+            ><input type="checkbox" name="sort" value="rating" /> Best
+            Rating</label
+          >
+          <label
+            ><input type="checkbox" name="sort" value="distance" /> Closest to
+            Airport</label
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="content" id="contentArea">
+      <div
+        class="card"
+        data-price="20"
+        data-rating="4.1"
+        data-distance="2.5"
+        data-tags="Shuttle (Parkhaus),E-Ladestation"
+      >
+        Parking A – $20 – ⭐ 4.1 – 2.5km
+      </div>
+      <div
+        class="card"
+        data-price="15"
+        data-rating="4.7"
+        data-distance="4.2"
+        data-tags="Valet (Parkplatz),Große Fahrzeuge"
+      >
+        Parking B – $15 – ⭐ 4.7 – 4.2km
+      </div>
+      <div
+        class="card"
+        data-price="30"
+        data-rating="4.3"
+        data-distance="1.2"
+        data-tags="Direkt im Flughafen"
+      >
+        Parking C – $30 – ⭐ 4.3 – 1.2km
+      </div>
+      <div
+        class="card"
+        data-price="18"
+        data-rating="3.9"
+        data-distance="3.0"
+        data-tags="Shuttle (Parkplatz),Autoschlüssel Mitnahme"
+      >
+        Parking D – $18 – ⭐ 3.9 – 3.0km
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
