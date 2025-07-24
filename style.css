@@ -19,7 +19,7 @@ body {
   justify-content: center;
   gap: 8px;
   padding: 12px 24px;
-  background-color: #0ea5e9;
+  background-color: #1a6797;
   color: white;
   font-size: 16px;
   border: none;
@@ -30,7 +30,7 @@ body {
 }
 
 .toggle-btn:hover {
-  background-color: #0284c7;
+  background-color: #1a6797;
 }
 
 .arrow-icon {
